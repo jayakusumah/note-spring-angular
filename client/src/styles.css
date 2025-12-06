@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
-/* app.css */
 body, html {
   @apply bg-neutral-800;
-  color: text-neutral-100;
+  @apply text-neutral-100;
   margin: 0;
   height: 100%;
 }
