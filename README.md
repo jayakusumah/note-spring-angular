@@ -24,10 +24,13 @@ Pastikan sudah terinstall:
 - [Maven](https://maven.apache.org/install.html)
 - [Node.js 18+](https://nodejs.org/) dan npm
 - [Angular CLI](https://angular.io/cli) (opsional, bisa diinstall global)
+- [Docker](https://www.docker.com/) dan [Docker Compose](https://docs.docker.com/compose/)
 
 ---
 
 ## Menjalankan Backend (Spring Boot)
+
+### Cara 1: Tanpa Docker
 
 1. Masuk ke folder `api`:
 
@@ -44,9 +47,23 @@ mvn spring-boot:run
 
 Aplikasi akan berjalan di `http://localhost:8000` secara default.
 
+### Cara 2: Dengan Docker
+
+1. Pastikan Docker berjalan.
+2. Jalankan perintah berikut dari root proyek:
+
+```bash
+docker compose up -d --build
+```
+
+> Perintah ini akan membuild image untuk backend dan frontend sekaligus, lalu menjalankan container di background.  
+> Backend akan tersedia di `http://localhost:8000` dan frontend di `http://localhost:4200`.
+
 ---
 
 ## Menjalankan Frontend (Angular)
+
+### Cara 1: Tanpa Docker
 
 1. Masuk ke folder `client`:
 
@@ -66,9 +83,15 @@ npm install
 ng serve
 ```
 
-Aplikasi akan berjalan di `http://localhost:4200` secara default.
+### Cara 2: Dengan Docker
 
-> Catatan: Pastikan backend sudah berjalan sebelum menjalankan frontend untuk menghindari error CORS atau API, dan akses melalui perangkat mobile untuk tampilan terbaik.
+Gunakan perintah:
+
+```bash
+docker compose up -d --build
+```
+
+> Pastikan Docker Compose sudah terinstall. Perintah ini akan menjalankan frontend otomatis.
 
 ---
 
