@@ -16,7 +16,7 @@
     </button>
   </div>
   
-  <form [formGroup]="form" (ngSubmit)="submit()" class="w-full max-w-md space-y-2">
+  <form [formGroup]="form" (ngSubmit)="submit()" class="w-full space-y-2">
     <!-- Title -->
     <input
       type="text"
@@ -30,7 +30,6 @@
 
     <!-- Body -->
     <textarea
-      rows="4"
       formControlName="body"
       placeholder="Catatan"
       class="w-full bg-transparent  text-neutral-100 focus:outline-none text-base placeholder-gray-500 resize-none"
