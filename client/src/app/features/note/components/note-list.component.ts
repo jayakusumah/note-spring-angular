@@ -25,7 +25,7 @@ import { ShortDatePipe } from '../../../shared/pipe/date.pipe';
       </div>
 
       <!-- Notes list -->
-      <div *ngIf="notes().length > 0" class="columns-2 sm:columns-3 gap-4">
+      <div *ngIf="notes().length > 0" class="columns-2 lg:columns-3 gap-4">
         <div *ngFor="let note of notes()" class="break-inside-avoid bg-neutral-900 border border-neutral-500 text-neutral-100 hover:bg-neutral-800 p-4 mb-4 shadow rounded-2xl relative cursor-pointer" [routerLink]="['/editor', note.id]">
           <!-- delete button -->
           <button 
