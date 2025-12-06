@@ -68,7 +68,7 @@ ng serve
 
 Aplikasi akan berjalan di `http://localhost:4200` secara default.
 
-> Catatan: Pastikan backend sudah berjalan sebelum menjalankan frontend untuk menghindari error CORS atau API.
+> Catatan: Pastikan backend sudah berjalan sebelum menjalankan frontend untuk menghindari error CORS atau API, dan akses melalui perangkat mobile untuk tampilan terbaik.
 
 ---
 
