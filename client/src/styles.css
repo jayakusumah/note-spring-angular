@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+/* app.css */
+body, html {
+  @apply bg-neutral-800; /* ganti dengan bg-* Tailwind yang kamu mau */
+  margin: 0;
+  height: 100%;
+}

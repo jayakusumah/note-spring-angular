@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+ "scripts": {
+    "start:api": "cd api && mvn spring-boot:run",
+    "start:client": "cd client && ng serve",
+    "start:all": "concurrently \"npm run start:api\" \"npm run start:client\""
+  }
+}

@@ -1,0 +1,42 @@
+<div class="min-h-screen p-6">
+  <div class="h-8 flex items-center mb-10">
+    <!-- Back button -->
+    <button [routerLink]="'/'" type="button">
+      <app-icon-back [size]="24" color="gray"></app-icon-back>
+    </button>
+  
+    <!-- Sve button -->
+    <button
+      type="submit"
+      (click)="submit()"
+      class="ml-auto uppercase text-neutral-100"
+      [disabled]="form.invalid"
+    >
+      Simpan
+    </button>
+  </div>
+  
+  <form [formGroup]="form" (ngSubmit)="submit()" class="w-full max-w-md space-y-2">
+    <!-- Title -->
+    <input
+      type="text"
+      formControlName="title"
+      placeholder="Judul"
+      class="w-full bg-transparen focus:border-blue-500 text-neutral-100 focus:outline-none text-xl placeholder-gray-500"
+    />
+    <div *ngFor="let err of getFormErrors('title')" class="text-red-500 text-sm mt-1">
+      {{ err }}
+    </div>
+
+    <!-- Body -->
+    <textarea
+      rows="4"
+      formControlName="body"
+      placeholder="Catatan"
+      class="w-full bg-transparent  text-neutral-100 focus:outline-none text-base placeholder-gray-500 resize-none"
+    ></textarea>
+    <div *ngFor="let err of getFormErrors('body')" class="text-red-500 text-sm mt-1">
+      {{ err }}
+    </div>
+  </form>
+</div>
